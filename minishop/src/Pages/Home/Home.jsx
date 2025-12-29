@@ -8,7 +8,7 @@ import "./Home.css";
 import { Carousel } from "./Carousel";
 import { Loaderskeleton } from "./Carousel";
 
-import DemoSimiler from "../../DemoPagesBySachin/DemoSimiler";
+import DemoSimiler from "../../DemoPages/DemoSimiler";
 
 // import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 // import Slider from "react-slick";
@@ -50,33 +50,10 @@ function Home() {
     <>
      <Navbar/>
     <Box mt='80px' >
-      
-
-      {/* <Box w={"98%"} m={"auto"} mt='74px' >
-
-        <Image src="https://s3.thingpic.com/images/WZ/1ChLD86XEtKdLmpiQHdW1nhF.jpeg"  alt='1'/>
-     <Carousel  
-          dots= {false} infinite= {true}
-          slidesToShow = {1}
-          slidesToScroll= {1}
-          autoplay= {true} autoplaySpeed= {3000} pauseOnHover= {true } 
-          Img={imagesTop}
-          />
-          </Box> */}
-          
-     {/* Carousal by kiran */}
      <HomeCarouselDemo/> 
          
          
     <Box w='90%' m={'auto'}  >
-{/*---------------------------------    carousel   ---------------------------------------*/}
-        {/* <Carousel  
-          dots= {true} infinite= {true}
-          slidesToShow = {1}
-          slidesToScroll= {1}
-          autoplay= {true} autoplaySpeed= {3000} pauseOnHover= {true } 
-          Img={imagesTop}
-          /> */}
  {/*---------------------------------    carousel   ---------------------------------------*/}          
  {loading ?  <Loaderskeleton/> : <Box >
           <Heading style={{color:"black",textAlign:"start" }}>T-Shirt</Heading>
@@ -84,9 +61,9 @@ function Home() {
             data={data.filter((item) => item.Categories === "t_shirt")}/>  
         </Box> }
 
-        <Box mt='80px' mb='60px' >
+        {/* <Box mt='80px' mb='60px' >
           <DemoSimiler  data={data.filter((item) => item.Categories === "shoes")} />
-        </Box>
+        </Box> */}
 {/*---------------------------------    carousel   ---------------------------------------*/}        
           <Box w={"100%"} m={"auto"} mt='74px' mb='50px' backgroundColor={'white'} >
             < Image src="https://thegenuineleather.com/wp-content/uploads/2022/10/MEN-LEATHER-JACKET.webp" m='auto' alt='1'/>
@@ -117,9 +94,9 @@ function Home() {
             data={data.filter((item) => item.Categories === "bags")} />
         </Box>}
 
-        <Box mt='80px' mb='60px' >
+        {/* <Box mt='80px' mb='60px' >
           <DemoSimiler  data={data.filter((item) => item.Categories === "t_shirt")} />
-        </Box>
+        </Box> */}
 
         <Box w={"100%"} m={"auto"} mt='74px' mb='50px' border='2px' >
         <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/WSC-Desktop_dad0fc88-3fc8-4ed8-becb-b7901e4b37f4_1400x.jpg?v=1673853393"  alt='3'/>
@@ -134,19 +111,19 @@ function Home() {
         <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/2000x650_f60dcd57-3f35-4f38-a32f-3f9666996225_1400x.jpg?v=1673538078"  alt='4'/>
           </Box>
            {loading ?  <Loaderskeleton/> :  <Box>
-          <Heading>Headphones</Heading>
+          <Heading style={{color:"black",textAlign:"start" }}>Headphones</Heading>
           <HomeProducts
             data={data.filter((item) => item.Categories === "Headphones")}/>
         </Box>}
 
         {loading ?  <Loaderskeleton/> :  <Box>
-          <Heading>Mobiles</Heading>
+          <Heading style={{color:"black",textAlign:"start" }}>Mobiles</Heading>
           <HomeProducts
             data={data.filter((item) => item.Categories === "mobile")}/>
         </Box>}
 
         {loading ?  <Loaderskeleton/> :  <Box>
-          <Heading>Shoes</Heading>
+          <Heading style={{color:"black",textAlign:"start" }}>Shoes</Heading>
           <HomeProducts
             data={data.filter((item) => item.Categories === "shoes")}/>
         </Box>}

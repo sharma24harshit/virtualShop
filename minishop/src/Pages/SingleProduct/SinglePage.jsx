@@ -9,7 +9,7 @@ import Loading from"../Loading/Loading"
 import { Button, Heading, useToast } from "@chakra-ui/react";
 import "./SinglePage.scss";
 import { BsFillHeartFill } from "react-icons/bs";
-import DemoSimiler from "../../DemoPagesBySachin/DemoSimiler";
+import DemoSimiler from "../../DemoPages/DemoSimiler";
 import { cartActions } from "../../redux/Cart/Cart.actions";
 import Navbar from "../../components/Navbar/Navbar";
 import { getUser, updateUser, userCartUpdate } from "../../redux/AddUser/User.actions";

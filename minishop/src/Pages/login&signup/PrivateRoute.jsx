@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
-import DLogin from "../../DemoPagesBySachin/DLogin";
+import DLogin from "../../DemoPages/DLogin";
 
 const PrivateRoute = ({ children }) => {
   const isauth = useSelector((val) => val.authUser.isauth);

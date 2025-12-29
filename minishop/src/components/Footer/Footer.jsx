@@ -115,7 +115,7 @@ import {IoLogoGooglePlaystore} from "react-icons/io5";
 {/*---------------------------------    Bottom Footer line  --------------------------------------------*/}
 <Text textAlign={'center'}
        bg={'gray.700'} color={'white'} fontSize={'13px'}  fontWeight={'600'} >
-        Copyright © industrybuying.com 2013-2022 All Right Reserved | Privacy Policy | Terms & Conditions
+        Copyright © virtualshop.com 2023-2027 All Right Reserved | Privacy Policy | Terms & Conditions
         </Text>
   </Box>
   )

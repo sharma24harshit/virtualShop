@@ -1,15 +1,11 @@
 import React from "react";
 import "./Demosimiler.scss";
 import { BsStarFill } from "react-icons/bs";
-import { Button, Text, useToast } from "@chakra-ui/react";
-import axios from "axios";
-
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Link, useNavigate } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+import {  useNavigate } from "react-router-dom";
 
 const DemoSimiler = ({data}) => {
 
@@ -18,16 +14,16 @@ const DemoSimiler = ({data}) => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    speed: 5000,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 4,
+          slidesToScroll: 4,
           infinite: true,
           dots: true,
         },
@@ -54,23 +50,23 @@ const DemoSimiler = ({data}) => {
   return (
     <div className="proMainDiv">
 
-    <Slider {...settings} >
+      <Slider {...settings} >
           {
                 data?.map((el,index) => (
-                <div key={index} className="prodiv">
+                <div key={el?.id ?? index} className="prodiv">
 
                 <img
-                  src={el?.image?.[1]}
-                  alt="name"
+                  src={el?.image?.[1] || el?.image?.[0] || ""}
+                  alt={el?.brand ? `${el.brand} image` : "Product image"}
                 />
                 <p className="proName">{el.brand}</p>
                 <div className="divPriceRating">
                   <p className="proPrice">
-                    Price: <span>₹ {el.price}</span>
+                    Price: <span>₹ {el?.price ?? "N/A"}</span>
                   </p>
                   <div className="divStar">
                     <p className="proRating"> <BsStarFill/></p>
-                    <span>{el.rating}</span></div>
+                    <span>{el?.rating ?? "No rating"}</span></div>
                   
                 </div>
                 <button className="addtocart" onClick={()=>navigate(`/data/${el.id}`)}>
@@ -79,7 +75,7 @@ const DemoSimiler = ({data}) => {
                 </div>
                
               ))}
-    </Slider>
+      </Slider>
      
       
 

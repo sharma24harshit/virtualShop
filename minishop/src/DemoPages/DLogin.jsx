@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   useToast,
   Button,
@@ -10,7 +10,7 @@ import {
   Input,
   Stack,
 } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import GoogleButton from "react-google-button";
 // import { AuthContext } from "../Pages/login&signup/AuthContextProvider";
@@ -32,8 +32,7 @@ const userInit = {
 
 
 const DLogin = () => {
-  const {isauth, userData}=useSelector(val=>val.authUser)
-  const nav = useNavigate()
+  const {isauth}=useSelector(val=>val.authUser)
   const dispatch  = useDispatch()
   const toast = useToast();
   const [user, setUser] = useState(userInit);

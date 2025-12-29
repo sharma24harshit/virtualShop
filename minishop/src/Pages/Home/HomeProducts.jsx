@@ -5,9 +5,8 @@ export default function HomeProducts(data) {
 
     return (
       <div className="container">
-          {data.data.map((el, i) => {
-            if(i<8){
-              return (
+          {data.data.map((el, i) => (
+
                 <div key={el.id} className="cord">
                 
             <div className="imgBox">
@@ -38,9 +37,9 @@ export default function HomeProducts(data) {
               </div>
             </div>
           </div>
-              )
-            }  
-            })}
+              
+
+            ))}
          </div>
      
     );
