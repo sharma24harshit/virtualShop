@@ -1,6 +1,6 @@
 <h1>Site Name : VirtualShop.com</h1>
 
-<h2>A clone of industry buying.com. It is an e-commerce website where you can buy products related fashion, mobile and speakers etc. It is a collaborative project made by a team of 5 members.</h2>
+<h2>It is an e-commerce website where you can buy products related fashion, mobile and speakers etc.</h2>
 
 <h1>Tech Stack Used :- </h1>
 
