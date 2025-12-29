@@ -1,11 +1,11 @@
 {
-  "name": "industrybuying-backend",
+  "name": "virtualShop-backend",
   "version": "1.0.0",
-  "description": "Backend API for Industrybuying.com clone",
-  "main": "server.js",
+  "description": "Backend API for virtualShop.com",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "seed": "node scripts/seed.js"
   },
   "keywords": ["express", "mongodb", "api"],
